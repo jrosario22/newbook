@@ -37,7 +37,6 @@ class Test extends React.Component {
     addStore = () => {
         let form = document.getElementById('storeForm');
         console.log(form);
-        // let id = {id: };
         let data = {
             //id: form.childNodes[0].value,
             name: form.childNodes[0].value,
@@ -61,9 +60,6 @@ class Test extends React.Component {
             Axios.delete('http://localhost:3000/bookstores/'+id)
                 .then(response => {
                     console.log("info was deleted")
-                    // this.setState({
-                    //     bookstores: response
-                    // })
                     this.displayStoreData();
                 })
                 .catch(err => console.log(err))
@@ -75,8 +71,7 @@ class Test extends React.Component {
             const rendStore = this.handleDisplayValue ? <AddStoreForm displayStoreData={this.displayStoreData} addStore={this.addStore} /> : null;
             return (
                 <div>
-                    <h1>Test</h1>
-                    {/* {this.dataB} */}
+                    <h1>Stores</h1>
                     {storeInfo}
                     <br></br>
                     {rendStore}

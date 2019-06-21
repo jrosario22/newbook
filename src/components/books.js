@@ -1,9 +1,9 @@
 import React from 'react';
 import Axios from 'axios';
-import AddBookForm from './addBookForm';
-import BookTemplate from './bookTemplate';
+import AddBookForm from '../addBookForm';
+import BookTemplate from '../bookTemplate';
 
-class Test2 extends React.Component {
+class Books extends React.Component {
     constructor(props) {
         super(props);
         this.state = { books: [], displayForm: false, id: ''};
@@ -71,7 +71,7 @@ class Test2 extends React.Component {
         const bookForm = this.handleDisplayValue ? <AddBookForm displayBookData={this.displayBookData} addBook={this.addBook} /> : null;
         return (
             <div>
-                <h1>Test2</h1>
+                <h1>Books Info</h1>
                 {/* {this.dataB} */}
                 {bookInfo}
                 <br></br>
@@ -83,4 +83,4 @@ class Test2 extends React.Component {
     }
 }
 
-export default Test2;
+export default Books;

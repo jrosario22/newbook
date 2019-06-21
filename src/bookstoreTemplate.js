@@ -6,11 +6,11 @@ function BookstoreTemplate(props) {
         props.deleteStore(props.id);
     }
     return (
-        <div id="bookTemplate">
+        <div id="storeTemplate">
             <label>{props.name}</label>
             <label>{props.address}</label>
             <img src={props.imageurl} alt="default"/>
-            <button onClick={deleteSelf}>Delete {props.id}</button>
+            <button onClick={deleteSelf}>Delete</button>
         </div>
     )
 }
